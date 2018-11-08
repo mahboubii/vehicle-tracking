@@ -6,9 +6,8 @@ install:
   - 'cd web'
   - 'npm install'
 script:
-  - 'npm run test'
   - 'CI=false npm run build'
-  - 'cp -R build ../backend-api/static'
+  - 'cp -R build ../backend-api/src/static'
 
 before_deploy:
   - 'cd ../backend-api'
