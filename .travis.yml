@@ -6,21 +6,24 @@ install:
   - 'cd webtest'
   - 'npm install'
 script:
+  - 'npm run test'
   - 'npm run build'
 
 before_deploy:
-  - 'pwd'
+  - 'cp -R /build ../backend-api/public'
   - 'cd ../backend-api'
+  - 'ls'
 
 deploy:
+- provider: elasticbeanstalk
   skip_cleanup: true
   provider: elasticbeanstalk
   access_key_id: $ACCESSKEYID
-  secret_access_key:
-    secure: $SECRETACCESSKEY
+  secret_access_key: $SECRETACCESSKEY
   region: 'eu-central-1'
   app: 'rimac-m2m'
   env: 'm2m-dev'
   bucket_name: 'elasticbeanstalk-eu-central-1-rimac-m2m'
   on:
     branch: develop
+
