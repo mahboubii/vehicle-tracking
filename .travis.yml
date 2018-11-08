@@ -20,7 +20,7 @@ deploy:
     secure: $SECRETACCESSKEY
   region: 'eu-central-1'
   app: 'rimac-m2m'
-  env: 'RimacM2m-env'
+  env: 'm2m-dev'
   bucket_name: 'elasticbeanstalk-eu-central-1-rimac-m2m'
   on:
     branch: develop
