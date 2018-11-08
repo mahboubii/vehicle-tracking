@@ -4,10 +4,10 @@ node_js:
 cache: yarn
 install:
   - 'cd web'
-  - 'npm install'
+  - 'yarn'
 script:
-  - 'CI=false npm run build'
-  - 'cp -R build ../backend-api/src/static'
+  - 'CI=false yarn build'
+  - 'mv build ../backend-api/src/static'
 
 before_deploy:
   - 'cd ../backend-api'
