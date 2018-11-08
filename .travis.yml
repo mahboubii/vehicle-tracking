@@ -7,7 +7,6 @@ install:
   - 'npm install'
 script:
   - 'cd web'
-  - 'npm run test'
   - 'npm run build'
 
 before_deploy:
