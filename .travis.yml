@@ -11,8 +11,10 @@ script:
 
 before_deploy:
   - 'cp -R build ../backend-api/static'
+  - 'ls'
   - 'cd ../backend-api'
   - 'ls'
+  - 'ls static'
 
 deploy:
 - provider: elasticbeanstalk
