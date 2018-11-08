@@ -6,10 +6,11 @@ install:
   - 'cd web'
   - 'npm install'
 script:
-  - 'echo pwd'
+  - 'pwd'
   - 'npm run build'
 
 before_deploy:
+  - 'pwd'
   - 'cd ../backend-api'
 
 deploy:
