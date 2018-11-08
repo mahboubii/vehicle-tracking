@@ -7,7 +7,6 @@ install:
   - 'yarn'
 script:
   - 'CI=false yarn build'
-  - 'mv build ../backend-api/src/static'
 
 before_deploy:
   - 'cd ../backend-api'
