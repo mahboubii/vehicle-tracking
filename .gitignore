@@ -697,3 +697,8 @@ ASALocalRun/
 
 
 # End of https://www.gitignore.io/api/git,node,macos,linux,python,windows,intellij,visualstudio
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

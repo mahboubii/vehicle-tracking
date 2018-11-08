@@ -1,13 +1,9 @@
 language: node_js
 node_js:
   - '10'
-cache: npm
-install:
+
+before_deploy:
   - 'cd backend-api'
-  - 'npm install'
-script:
-  - 'npm run test'
-  - 'npm run build'
 
 deploy:
   provider: elasticbeanstalk
