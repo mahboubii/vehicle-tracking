@@ -7,10 +7,10 @@ install:
   - 'npm install'
 script:
   - 'npm run test'
-  - 'npm run build'
+  - 'CI=false npm run build'
 
 before_deploy:
-  - 'cp -R /build ../backend-api/public'
+  - 'cp -R /build ../backend-api/static'
   - 'cd ../backend-api'
   - 'ls'
 
