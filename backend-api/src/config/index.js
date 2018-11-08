@@ -1,6 +1,6 @@
 const _default = {
 	server: {
-		port: process.env.PORT || 8080;
+		port: process.env.PORT || 8080,
 	},
 	jwt: {
 		secret: process.env.JWT_SECRET,
