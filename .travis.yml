@@ -8,16 +8,13 @@ install:
 script:
   - 'npm run test'
   - 'CI=false npm run build'
+  - 'cp -R build ../backend-api/static'
 
 before_deploy:
-  - 'cp -R build ../backend-api/static'
-  - 'ls'
   - 'cd ../backend-api'
-  - 'ls'
-  - 'ls static'
 
 deploy:
-- provider: elasticbeanstalk
+  provider: elasticbeanstalk
   skip_cleanup: true
   provider: elasticbeanstalk
   access_key_id: $ACCESSKEYID
