@@ -10,7 +10,7 @@ script:
   - 'CI=false npm run build'
 
 before_deploy:
-  - 'cp -R /build ../backend-api/static'
+  - 'cp -R build ../backend-api/static'
   - 'cd ../backend-api'
   - 'ls'
 
