@@ -6,13 +6,14 @@ install:
   - 'cd web'
   - 'npm install'
 script:
-  - 'cd web'
+  - 'echo pwd'
   - 'npm run build'
 
 before_deploy:
-  - 'cd backend-api'
+  - 'cd ../backend-api'
 
 deploy:
+  skip_cleanup: true
   provider: elasticbeanstalk
   access_key_id: $ACCESSKEYID
   secret_access_key:
